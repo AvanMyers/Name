@@ -8,24 +8,25 @@ namespace Name
         {
             string name;
             string simbol;
+            string simbolName = "";
 
             Console.WriteLine("Введите имя:");
             name = Console.ReadLine();
             Console.WriteLine("Введите символ");
             simbol = Console.ReadLine();
 
-            for (int i = 0; i < name.Length + 2; i++)
+
+            for (int i = 0; i < name.Length; i++)
             {
-                Console.Write(simbol);
+                simbolName += simbol;
             }
+
+            simbolName += simbol + simbol;
 
             Console.WriteLine();
+            Console.WriteLine(simbolName);
             Console.WriteLine(simbol + name + simbol);
-
-            for (int i = 0; i < name.Length + 2; i++)
-            {
-                Console.Write(simbol);
-            }
+            Console.WriteLine(simbolName);
 
             Console.ReadKey();
         }
